@@ -1,28 +1,19 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import colors from '../config/colors';
-import ListItem from '../components/ListItem';
+import Card from '../components/Card';
 
-interface ListingDetailsScreenProps {
-  image: any;
-}
+interface ListingDetailsScreenProps {}
 
-const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({
-  image,
-}) => {
+const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({}) => {
   return (
     <View>
-      <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.titleText}>Red jacket for sale</Text>
-        <Text style={styles.subTitleText}>$100</Text>
-        <View style={styles.userContainer}>
-          <ListItem
-            image={require('../assets/mosh.jpg')}
-            title='Mosh Hamedani'
-            subTitle='5 Listings'
-          />
-        </View>
+        <Card
+          title='Red jacket for sale'
+          subTitle='$100'
+          image={require('../assets/jacket.jpg')}
+        />
       </View>
     </View>
   );

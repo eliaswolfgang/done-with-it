@@ -25,8 +25,7 @@ export default ListItem;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: colors.white,
-    padding: 15,
+    padding: 5,
   },
   image: {
     width: 70,

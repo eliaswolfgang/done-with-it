@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import colors from '../config/colors';
 import React from 'react';
+import ListItem from './ListItem';
 
 interface CardProps {
   title: string;
@@ -14,6 +15,11 @@ export const Card: React.FC<CardProps> = ({ title, subTitle, image }) => {
       <Image source={image} style={styles.image} />
       <Text style={styles.titleText}>{title}</Text>
       <Text style={styles.subTitleText}>{subTitle}</Text>
+      <ListItem
+        image={require('../assets/mosh.jpg')}
+        title='Mosh Hamedani'
+        subTitle='5 Listings'
+      />
     </View>
   );
 };
