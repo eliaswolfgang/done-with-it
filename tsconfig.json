@@ -1,6 +1,8 @@
 {
   "extends": "expo/tsconfig.base",
+  "exclude": ["node_modules", "babel.config.js"],
   "compilerOptions": {
+    "jsx": "react",
     "strict": true
   }
 }
