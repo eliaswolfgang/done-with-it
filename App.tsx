@@ -11,9 +11,9 @@ export default function App() {
   const handlePress = () => console.log('Text pressed');
   return (
     <View style={styles.app}>
-      {/* <View style={styles.container}>
+      <View style={styles.container}>
         <WelcomeScreen />
-      </View> */}
+      </View>
       {/* <View style={{ backgroundColor: colors.black }}> */}
       {/* <Card
           title='Red jacket for sale'
@@ -26,7 +26,7 @@ export default function App() {
         title='Mosh Hamedani'
         subTitle='5 Listings'
       /> */}
-      <ViewImageScreen />
+      {/* <ViewImageScreen /> */}
     </View>
   );
 }
