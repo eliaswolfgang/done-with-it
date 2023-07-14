@@ -2,10 +2,14 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import colors from './config/colors';
 import Card from './components/Card';
+import { Button } from './components/Button';
+import { useRouter } from 'expo-router';
 
 interface ListingDetailsScreenProps {}
 
 const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({}) => {
+  const router = useRouter();
+  const handleMessages = () => router.replace('/messages');
   return (
     <View>
       <View style={styles.detailsContainer}>
@@ -14,6 +18,13 @@ const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({}) => {
           subTitle='$100'
           image={require('./assets/jacket.jpg')}
         />
+      </View>
+      <View style={{ padding: 20, width: '100%' }}>
+        <Button
+          title={'View messages'}
+          onPress={handleMessages}
+          color='secondary'
+        ></Button>
       </View>
     </View>
   );

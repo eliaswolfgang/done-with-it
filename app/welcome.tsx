@@ -19,9 +19,11 @@ export const Welcome: React.FC = () => {
         </Text>
       </View>
       <View style={{ padding: 20, width: '100%' }}>
-        <Button title={'login'} onPress={handleLogin} color='secondary'>
-          <Text>Login</Text>
-        </Button>
+        <Button
+          title={'login'}
+          onPress={handleLogin}
+          color='secondary'
+        ></Button>
       </View>
 
       <View style={{ padding: 20, width: '100%' }}>

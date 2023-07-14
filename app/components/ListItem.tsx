@@ -1,22 +1,41 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+} from 'react-native';
 import React from 'react';
 import colors from '../config/colors';
+import { Swipeable } from 'react-native-gesture-handler';
 
 interface ListItemProps {
   image: any;
   title: string;
   subTitle: string;
+  onPress?: () => void;
+  renderRightActions?: () => React.ReactNode;
 }
 
-const ListItem: React.FC<ListItemProps> = ({ image, title, subTitle }) => {
+const ListItem: React.FC<ListItemProps> = ({
+  image,
+  title,
+  subTitle,
+  onPress,
+  renderRightActions,
+}) => {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
-      <View>
-        <Text style={styles.titleText}>{title}</Text>
-        <Text>{subTitle}</Text>
-      </View>
-    </View>
+    <Swipeable renderRightActions={renderRightActions}>
+      <TouchableHighlight onPress={onPress} underlayColor={colors.softYellow}>
+        <View style={styles.container}>
+          <Image style={styles.image} source={image} />
+          <View>
+            <Text style={styles.titleText}>{title}</Text>
+            <Text>{subTitle}</Text>
+          </View>
+        </View>
+      </TouchableHighlight>
+    </Swipeable>
   );
 };
 
