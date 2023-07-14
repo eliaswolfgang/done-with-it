@@ -5,14 +5,16 @@ import colors from '../config/colors';
 interface ButtonProps {
   title: string;
   titleColor?: keyof typeof colors;
-  onPress: () => void;
+  onPress?: () => void;
   color?: keyof typeof colors;
+  children?: React.ReactNode;
 }
 export const Button: React.FC<ButtonProps> = ({
   title,
   titleColor = 'white',
   onPress,
   color = 'primary',
+  children,
 }) => {
   return (
     <TouchableOpacity
@@ -23,6 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
         <Text style={[styles.title, { color: colors[titleColor] }]}>
           {title}
         </Text>
+        <View>{children}</View>
       </View>
     </TouchableOpacity>
   );

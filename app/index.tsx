@@ -1,24 +1,19 @@
 import React from 'react';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
+import WelcomeScreen from './welcome';
 import { View, StyleSheet } from 'react-native';
-import Button from './app/components/Button';
-import Card from './app/components/Card';
-import colors from './app/config/colors';
-import ListItem from './app/components/ListItem';
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import colors from './config/colors';
 
 export default function App() {
   const handlePress = () => console.log('Text pressed');
   return (
     <View style={styles.app}>
-      {/* <View style={styles.container}>
+      <View style={styles.container}>
         <WelcomeScreen />
       </View>
-      <View style={{ backgroundColor: colors.black }}>
+      {/* <View style={{ backgroundColor: colors.black }}>
         <ListingDetailsScreen />
-      </View> */}
-      <ViewImageScreen />
+      </View>
+      <ViewImageScreen /> */}
     </View>
   );
 }

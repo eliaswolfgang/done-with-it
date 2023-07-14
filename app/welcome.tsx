@@ -1,23 +1,27 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { Button } from '../components/Button';
+import { Button } from './components/Button';
+import { useRouter } from 'expo-router';
 
-export default function WelcomeScreen() {
-  const handleLogin = () => console.log('login');
+export const Welcome: React.FC = () => {
+  const router = useRouter();
+  const handleLogin = () => router.replace('/listing');
   const handleRegister = () => console.log('register');
   return (
     <ImageBackground
       style={styles.background}
-      source={require('../assets/background.jpg')}
+      source={require('./assets/background.jpg')}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require('../assets/logo-red.png')} />
+        <Image style={styles.logo} source={require('./assets/logo-red.png')} />
         <Text style={{ fontSize: 30, fontWeight: 'bold', paddingVertical: 20 }}>
           Sell What You Don't Need
         </Text>
       </View>
       <View style={{ padding: 20, width: '100%' }}>
-        <Button title={'login'} onPress={handleLogin} color='secondary' />
+        <Button title={'login'} onPress={handleLogin} color='secondary'>
+          <Text>Login</Text>
+        </Button>
       </View>
 
       <View style={{ padding: 20, width: '100%' }}>
@@ -30,7 +34,9 @@ export default function WelcomeScreen() {
       </View>
     </ImageBackground>
   );
-}
+};
+
+export default Welcome;
 
 const styles = StyleSheet.create({
   background: {

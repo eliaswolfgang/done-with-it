@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "jsEngine": "hermes",
     "orientation": "default",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./app/assets/splash.png",
@@ -25,6 +24,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "scheme": "myapp",
+      "web": {
+        "bundler": "metro"
+      }
     },
     "description": "A marketplace for selling and buying used items."
   }

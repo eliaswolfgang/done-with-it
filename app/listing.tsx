@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
-import colors from '../config/colors';
-import Card from '../components/Card';
+import colors from './config/colors';
+import Card from './components/Card';
 
 interface ListingDetailsScreenProps {}
 
@@ -12,7 +12,7 @@ const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({}) => {
         <Card
           title='Red jacket for sale'
           subTitle='$100'
-          image={require('../assets/jacket.jpg')}
+          image={require('./assets/jacket.jpg')}
         />
       </View>
     </View>

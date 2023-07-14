@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import colors from '../config/colors';
+// import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function ViewImageScreen() {
+export const ViewImageScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.closeIcon}>
@@ -19,11 +19,13 @@ export default function ViewImageScreen() {
       <Image
         resizeMode='contain'
         style={styles.image}
-        source={require('../assets/chair.jpg')}
+        source={require('./assets/chair.jpg')}
       />
     </View>
   );
-}
+};
+
+export default ViewImageScreen;
 
 const styles = StyleSheet.create({
   image: {
